@@ -1,5 +1,16 @@
 function sortProductsByPrice(products) {
   // Your code here
+  //bubble sort
+  for (let i = 0; i < products.length - 1; i++) {
+    for (let j = 0; j < products.length - 1 - i; j++) {
+      if (products[j].price > products[j + 1].price) {
+        let moreValue = products[j].price;
+        products[j].price = products[j + 1].price;
+        products[j + 1].price = moreValue;
+      }
+    }
+  }
+  return products;
 }
 
 // Test case
